@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import GallerySection from "./GallerySection";
 import { useEffect, useRef, useState } from "react";
 import MarqueeGallery from "./GalleryCourousel";
+import Footer from "./Footer";
 
 // Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
 // Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
@@ -317,14 +318,14 @@ export default function MehndiArtistWebsite() {
           </p>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, idx) => (
+            {galleryImages.map((v, idx) => (
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 key={idx}
                 className="rounded-xl overflow-hidden shadow-lg"
               >
                 <img
-                  src={`https://images.unsplash.com/photo-1549887534-4c3f6d3f9b3b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder&idx=${idx}`}
+                  src={v.src}
                   alt={`portfolio-${idx}`}
                   className="w-full h-64 object-cover"
                 />
@@ -485,34 +486,7 @@ export default function MehndiArtistWebsite() {
       </section>
 
       {/* CONTACT / FOOTER */}
-      <footer id="contact" className="py-12 border-t border-white/60">
-        <div className="w-[90%] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <div className="font-bold text-2xl">Mehndi Artistry</div>
-            <div className="mt-2 text-slate-600">
-              Make your moments memorable with detailed mehndi art.
-            </div>
-          </div>
-
-          <div>
-            <div className="font-semibold">Contact</div>
-            <div className="mt-2 text-slate-700">Phone: +91 98765 43210</div>
-            <div className="text-slate-700">Email: mehndi@example.com</div>
-          </div>
-
-          <div>
-            <div className="font-semibold">Follow</div>
-            <div className="mt-2 flex gap-3">
-              <a className="px-3 py-2 bg-white/60 rounded">Instagram</a>
-              <a className="px-3 py-2 bg-white/60 rounded">WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 text-center text-sm text-slate-600">
-          © {new Date().getFullYear()} Mehndi Artistry — All rights reserved
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
