@@ -81,10 +81,10 @@ export default function MehndiArtistWebsite() {
         <div className="w-[90%] mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-amber-300 flex items-center justify-center shadow-lg">
-              <span className="font-bold text-white">MA</span>
+              <span className="font-bold text-white">SA</span>
             </div>
             <div>
-              <div className="text-sm font-semibold">Mehndi Artistry</div>
+              <div className="text-sm font-semibold">Shiva Mehndi Arts</div>
               <div className="text-xs text-slate-700">
                 Bridal | Events | Custom
               </div>
