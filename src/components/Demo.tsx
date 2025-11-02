@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import GallerySection from "./GallerySection";
+import { useEffect, useRef, useState } from "react";
 
 // Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
 // Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
@@ -21,13 +23,59 @@ const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12 } }),
 };
-
+export const galleryImages = [
+  "/images/henna1,jpeg",
+  "/images/henna2,jpeg",
+  "/images/henna3,jpeg",
+  "/images/henna4,jpeg",
+  "/images/henna5,jpeg",
+  "/images/henna6,jpeg",
+  "/images/henna7,jpeg",
+  "/images/henna8,jpeg",
+  "/images/henna9,jpeg",
+  "/images/henna10,jpeg",
+  "/images/henna11,jpeg",
+  "/images/henna12,jpeg",
+  "/images/henna13,jpeg",
+  "/images/henna14,jpeg",
+  "/images/henna15,jpeg",
+  "/images/henna16,jpeg",
+  "/images/henna17,jpeg",
+  "/images/henna18,jpeg",
+];
+const images = [
+  "https://plus.unsplash.com/premium_photo-1661896237419-6e232b54eefc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
+  "https://plus.unsplash.com/premium_photo-1682092018999-2c8fcfe944f3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670",
+  "https://images.unsplash.com/photo-1610173827043-9db50e0d8ef9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
+  "https://images.unsplash.com/photo-1726509698494-14467502ecf8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2621",
+  "https://images.unsplash.com/photo-1599799045747-9dbfcfef6b97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670",
+  "https://images.unsplash.com/photo-1684814070823-97e0b9e99c69?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1286",
+  "https://images.unsplash.com/photo-1684814070468-c73a55585221?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1286",
+  "https://images.unsplash.com/photo-1593489062665-9f26fa627d73?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
+  "https://images.unsplash.com/photo-1684813270065-73dce8b31b92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1286",
+];
 export default function MehndiArtistWebsite() {
+  const [activeImage, setActiveImage] = useState<string>(images[0]);
+  const countRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      countRef.current = setInterval(() => {
+        const index = Math.floor(Math.random() * images.length);
+        setActiveImage(images[index]);
+      }, 2000);
+    }
+
+    return () => {
+      clearInterval(countRef.current);
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-rose-50 via-amber-50 to-white text-slate-900">
       {/* NAV */}
       <nav className="fixed w-full z-40 backdrop-blur-sm bg-white/30 border-b border-white/50">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="w-[90%] mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-amber-300 flex items-center justify-center shadow-lg">
               <span className="font-bold text-white">MA</span>
@@ -61,7 +109,7 @@ export default function MehndiArtistWebsite() {
 
       {/* HERO */}
       <section id="hero" className="pt-24 pb-20">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="w-[90%] mt-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -123,10 +171,14 @@ export default function MehndiArtistWebsite() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1534872216214-7d9a6f6d36f9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
-                alt="mehndi hero"
+            <div className="rounded-3xl overflow-hidden shadow-2xl flex">
+              <motion.img
+                key={activeImage}
+                src={activeImage}
+                alt=""
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 className="w-full h-[420px] object-cover"
               />
             </div>
@@ -147,7 +199,7 @@ export default function MehndiArtistWebsite() {
 
       {/* ABOUT */}
       <section id="about" className="py-16 border-t border-white/60">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="w-[90%] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -197,7 +249,7 @@ export default function MehndiArtistWebsite() {
 
       {/* SERVICES */}
       <section id="services" className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="w-[90%] mx-auto px-6">
           <motion.h3
             className="text-xl font-semibold"
             initial={{ opacity: 0 }}
@@ -256,7 +308,7 @@ export default function MehndiArtistWebsite() {
 
       {/* PORTFOLIO */}
       <section id="portfolio" className="py-16 border-t border-white/60">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="w-[90%] mx-auto px-6">
           <h3 className="text-xl font-semibold">Portfolio</h3>
           <p className="text-slate-600 mt-2">
             A curated selection of recent works.
@@ -288,7 +340,7 @@ export default function MehndiArtistWebsite() {
 
       {/* PROCESS */}
       <section id="process" className="py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="w-[90%] mx-auto px-6 text-center">
           <h3 className="text-2xl font-bold">Booking & Process</h3>
           <p className="mt-3 text-slate-600">
             Simple steps from consultation to the final touch-up.
@@ -322,7 +374,7 @@ export default function MehndiArtistWebsite() {
 
       {/* BOOKING */}
       <section id="booking" className="py-16 border-t border-white/60">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <h3 className="text-2xl font-bold">Book a Session</h3>
           <p className="mt-2 text-slate-600">
             Fill details below and our team will reach out to confirm
@@ -330,7 +382,7 @@ export default function MehndiArtistWebsite() {
           </p>
 
           <motion.form
-            className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/70 p-6 rounded-2xl shadow"
+            className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/70 p-12 rounded-2xl shadow"
             onSubmit={(e) => {
               e.preventDefault();
               alert("Form submitted (demo).");
@@ -373,7 +425,7 @@ export default function MehndiArtistWebsite() {
 
       {/* TESTIMONIALS */}
       <section id="testimonials" className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="w-[90%] mx-auto px-6">
           <h3 className="text-xl font-semibold">What clients say</h3>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -406,29 +458,7 @@ export default function MehndiArtistWebsite() {
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="py-16 border-t border-white/60">
-        <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-xl font-semibold">Gallery</h3>
-          <p className="text-slate-600 mt-2">
-            Swipe through detailed close-ups and motifs.
-          </p>
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.04 }}
-                className="rounded-lg overflow-hidden shadow"
-              >
-                <img
-                  src={`https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder&i=${i}`}
-                  alt={`g-${i}`}
-                  className="w-full h-40 object-cover"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GallerySection />
 
       {/* FAQ */}
       <section id="faq" className="py-16">
@@ -453,7 +483,7 @@ export default function MehndiArtistWebsite() {
 
       {/* CONTACT / FOOTER */}
       <footer id="contact" className="py-12 border-t border-white/60">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="w-[90%] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <div className="font-bold text-2xl">Mehndi Artistry</div>
             <div className="mt-2 text-slate-600">
