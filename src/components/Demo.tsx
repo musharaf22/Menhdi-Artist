@@ -1,0 +1,485 @@
+"use client";
+import { motion } from "framer-motion";
+
+// Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
+// Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
+
+const sections = [
+  "Hero",
+  "About",
+  "Services",
+  "Portfolio",
+  "Process",
+  "Booking",
+  "Testimonials",
+  "Gallery",
+  "FAQ",
+  "Contact",
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12 } }),
+};
+
+export default function MehndiArtistWebsite() {
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-rose-50 via-amber-50 to-white text-slate-900">
+      {/* NAV */}
+      <nav className="fixed w-full z-40 backdrop-blur-sm bg-white/30 border-b border-white/50">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-amber-300 flex items-center justify-center shadow-lg">
+              <span className="font-bold text-white">MA</span>
+            </div>
+            <div>
+              <div className="text-sm font-semibold">Mehndi Artistry</div>
+              <div className="text-xs text-slate-700">
+                Bridal | Events | Custom
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:flex gap-6 items-center">
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+            <a href="#portfolio" className="hover:underline">
+              Portfolio
+            </a>
+            <a href="#booking" className="hover:underline">
+              Booking
+            </a>
+            <a
+              href="#contact"
+              className="px-4 py-2 rounded-full bg-rose-500 text-white shadow hover:scale-105 transform transition"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section id="hero" className="pt-24 pb-20">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+          >
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+              Hand-crafted <span className="text-rose-500">Mehndi</span> designs
+              <br />
+              for every celebration
+            </h1>
+            <p className="mt-6 text-lg text-slate-700">
+              Traditional motifs, modern twists — bespoke mehndi art for brides,
+              parties and photo shoots. Book a consultation or view the
+              portfolio.
+            </p>
+
+            <div className="mt-8 flex gap-4">
+              <a
+                href="#booking"
+                className="px-6 py-3 rounded-full bg-rose-500 text-white font-semibold shadow hover:scale-105 transform transition"
+              >
+                Book Now
+              </a>
+              <a
+                href="#portfolio"
+                className="px-6 py-3 rounded-full border border-rose-200 text-rose-600 font-semibold hover:bg-rose-50"
+              >
+                View Portfolio
+              </a>
+            </div>
+
+            <div className="mt-8 flex gap-4 text-sm text-slate-600">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-full bg-white/60 flex items-center justify-center shadow">
+                  ⭐
+                </div>
+                <div>
+                  <div className="font-semibold">4.9</div>
+                  <div className="text-xs">(250+ reviews)</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-full bg-white/60 flex items-center justify-center shadow">
+                  🎨
+                </div>
+                <div>
+                  <div className="font-semibold">500+</div>
+                  <div className="text-xs">Designs</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1534872216214-7d9a6f6d36f9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+                alt="mehndi hero"
+                className="w-full h-[420px] object-cover"
+              />
+            </div>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              className="absolute -bottom-8 left-6 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-lg border"
+            >
+              <div className="text-sm font-semibold">Bridal special</div>
+              <div className="text-xs text-slate-700">
+                Custom motifs + trial session
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="py-16 border-t border-white/60">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={1}
+            className="md:col-span-1"
+          >
+            <h2 className="text-2xl font-bold">About the Artist</h2>
+            <p className="mt-4 text-slate-700">
+              With a decade of experience, the artist blends traditional henna
+              art with modern aesthetics to craft unique stories on skin.
+              Trained under master artists and available for destination events.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li>• 10+ years experience</li>
+              <li>• Bridal packages</li>
+              <li>• Custom designs & workshops</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={2}
+            className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4"
+          >
+            <div className="rounded-xl overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+                alt="about1"
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+                alt="about2"
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.h3
+            className="text-xl font-semibold"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Services
+          </motion.h3>
+          <motion.div
+            className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {[
+              {
+                title: "Bridal",
+                desc: "Full bridal mehndi with trial and touchups",
+                price: "Contact for pricing",
+              },
+              {
+                title: "Party & Events",
+                desc: "Guests mehndi, minimal to detailed",
+                price: "From ₹500",
+              },
+              {
+                title: "Custom Sessions",
+                desc: "Photoshoots, workshops and private sessions",
+                price: "Custom",
+              },
+            ].map((s, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                variants={fadeUp}
+                className="p-6 bg-white/70 rounded-2xl shadow"
+              >
+                <div className="text-sm font-semibold text-rose-500">
+                  {s.title}
+                </div>
+                <div className="mt-3 font-bold">{s.desc}</div>
+                <div className="mt-4 text-sm text-slate-600">{s.price}</div>
+                <div className="mt-6">
+                  <a
+                    href="#booking"
+                    className="px-4 py-2 rounded-full bg-rose-500 text-white text-sm font-medium"
+                  >
+                    Book
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="py-16 border-t border-white/60">
+        <div className="max-w-6xl mx-auto px-6">
+          <h3 className="text-xl font-semibold">Portfolio</h3>
+          <p className="text-slate-600 mt-2">
+            A curated selection of recent works.
+          </p>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Array.from({ length: 6 }).map((_, idx) => (
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                key={idx}
+                className="rounded-xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src={`https://images.unsplash.com/photo-1549887534-4c3f6d3f9b3b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder&idx=${idx}`}
+                  alt={`portfolio-${idx}`}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4 bg-white">
+                  <div className="font-semibold">Intricate Henna</div>
+                  <div className="text-sm text-slate-600 mt-2">
+                    Bridal handpiece with floral motifs.
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section id="process" className="py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-2xl font-bold">Booking & Process</h3>
+          <p className="mt-3 text-slate-600">
+            Simple steps from consultation to the final touch-up.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { title: "Consult", desc: "Share inspiration & event details" },
+              {
+                title: "Trial",
+                desc: "Trial design (for bridal) and timeline",
+              },
+              { title: "Event Day", desc: "Flawless execution & touchups" },
+            ].map((p, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={i}
+                className="p-6 bg-white/70 rounded-2xl shadow"
+              >
+                <div className="text-rose-500 font-bold">{p.title}</div>
+                <div className="mt-2 text-slate-700">{p.desc}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BOOKING */}
+      <section id="booking" className="py-16 border-t border-white/60">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-2xl font-bold">Book a Session</h3>
+          <p className="mt-2 text-slate-600">
+            Fill details below and our team will reach out to confirm
+            availability.
+          </p>
+
+          <motion.form
+            className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/70 p-6 rounded-2xl shadow"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Form submitted (demo).");
+            }}
+          >
+            <input
+              required
+              placeholder="Full name"
+              className="p-3 rounded-lg border"
+            />
+            <input
+              required
+              placeholder="Phone or WhatsApp"
+              className="p-3 rounded-lg border"
+            />
+            <input
+              required
+              placeholder="Event date"
+              type="date"
+              className="p-3 rounded-lg border"
+            />
+            <select className="p-3 rounded-lg border">
+              <option>Bridal</option>
+              <option>Party</option>
+              <option>Workshop</option>
+            </select>
+            <textarea
+              placeholder="Share a short note or reference"
+              className="p-3 rounded-lg border col-span-1 md:col-span-2"
+            />
+            <button
+              type="submit"
+              className="col-span-1 md:col-span-2 px-6 py-3 rounded-full bg-rose-500 text-white font-semibold"
+            >
+              Send Request
+            </button>
+          </motion.form>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section id="testimonials" className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h3 className="text-xl font-semibold">What clients say</h3>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Aisha",
+                note: "Absolutely loved my bridal mehndi — artist was patient and creative.",
+              },
+              {
+                name: "Sana",
+                note: "Guests kept asking who the artist was. Highly recommend.",
+              },
+              {
+                name: "Riya",
+                note: "Professional and timely. Designs were flawless.",
+              },
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="p-6 bg-white/70 rounded-2xl shadow"
+              >
+                <div className="font-semibold">{t.name}</div>
+                <div className="mt-2 text-slate-700">"{t.note}"</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section id="gallery" className="py-16 border-t border-white/60">
+        <div className="max-w-6xl mx-auto px-6">
+          <h3 className="text-xl font-semibold">Gallery</h3>
+          <p className="text-slate-600 mt-2">
+            Swipe through detailed close-ups and motifs.
+          </p>
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.04 }}
+                className="rounded-lg overflow-hidden shadow"
+              >
+                <img
+                  src={`https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder&i=${i}`}
+                  alt={`g-${i}`}
+                  className="w-full h-40 object-cover"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h3 className="text-xl font-semibold">FAQ</h3>
+          <div className="mt-4 space-y-4">
+            <div className="p-4 bg-white/70 rounded-lg shadow">
+              <div className="font-semibold">How long does mehndi last?</div>
+              <div className="text-slate-700 mt-1">
+                Typically 1-3 weeks depending on aftercare and skin type.
+              </div>
+            </div>
+            <div className="p-4 bg-white/70 rounded-lg shadow">
+              <div className="font-semibold">Do you travel?</div>
+              <div className="text-slate-700 mt-1">
+                Yes — travel charges may apply for outstation events.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT / FOOTER */}
+      <footer id="contact" className="py-12 border-t border-white/60">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <div className="font-bold text-2xl">Mehndi Artistry</div>
+            <div className="mt-2 text-slate-600">
+              Make your moments memorable with detailed mehndi art.
+            </div>
+          </div>
+
+          <div>
+            <div className="font-semibold">Contact</div>
+            <div className="mt-2 text-slate-700">Phone: +91 98765 43210</div>
+            <div className="text-slate-700">Email: mehndi@example.com</div>
+          </div>
+
+          <div>
+            <div className="font-semibold">Follow</div>
+            <div className="mt-2 flex gap-3">
+              <a className="px-3 py-2 bg-white/60 rounded">Instagram</a>
+              <a className="px-3 py-2 bg-white/60 rounded">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center text-sm text-slate-600">
+          © {new Date().getFullYear()} Mehndi Artistry — All rights reserved
+        </div>
+      </footer>
+    </main>
+  );
+}
