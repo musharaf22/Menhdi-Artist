@@ -27,24 +27,132 @@ const fadeUp = {
   visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12 } }),
 };
 export const galleryImages = [
-  //   { src: "/images/henna1.jpeg", alt: "" },
-  { src: "/images/henna2.jpeg", alt: "" },
-  { src: "/images/henna3.jpeg", alt: "" },
-  { src: "/images/henna4.jpeg", alt: "" },
-  { src: "/images/henna5.jpeg", alt: "" },
-  { src: "/images/henna6.jpeg", alt: "" },
-  { src: "/images/henna7.jpeg", alt: "" },
-  { src: "/images/henna8.jpeg", alt: "" },
-  { src: "/images/henna9.jpeg", alt: "" },
-  { src: "/images/henna10.jpeg", alt: "" },
-  { src: "/images/henna11.jpeg", alt: "" },
-  { src: "/images/henna12.jpeg", alt: "" },
-  { src: "/images/henna13.jpeg", alt: "" },
-  { src: "/images/henna14.jpeg", alt: "" },
-  { src: "/images/henna15.jpeg", alt: "" },
-  { src: "/images/henna16.jpeg", alt: "" },
-  { src: "/images/henna17.jpeg", alt: "" },
-  { src: "/images/henna18.jpeg", alt: "" },
+  {
+    src: "/images/henna2.jpeg",
+    alt: "Bridal mehndi with full-hand intricate design",
+    title: "Bridal Full-Hand Mehndi",
+    description:
+      "Elegant bridal mehndi with full-hand coverage featuring floral and paisley motifs, perfect for weddings and festive occasions.",
+  },
+  {
+    src: "/images/henna2.jpeg",
+    alt: "Intricate henna with floral motifs and detailed patterns",
+    title: "Intricate Henna Design",
+    description:
+      "Delicate mehndi artwork showcasing fine floral motifs, geometric patterns, and a graceful flow ideal for modern brides.",
+  },
+  {
+    src: "/images/henna3.jpeg",
+    alt: "Traditional mehndi design on palm",
+    title: "Traditional Palm Mehndi",
+    description:
+      "Classic Indian mehndi with concentric circles and mandala-style detailing for a timeless bridal look.",
+  },
+  {
+    src: "/images/henna4.jpeg",
+    alt: "Arabic mehndi with flowing floral patterns",
+    title: "Arabic Floral Mehndi",
+    description:
+      "Stylish Arabic mehndi design with flowing floral vines and bold outlines, perfect for engagement ceremonies.",
+  },
+  {
+    src: "/images/henna5.jpeg",
+    alt: "Full leg mehndi for bridal occasion",
+    title: "Bridal Leg Mehndi",
+    description:
+      "Detailed bridal leg mehndi with peacock and paisley elements symbolizing joy and elegance for wedding rituals.",
+  },
+  {
+    src: "/images/henna6.jpeg",
+    alt: "Backhand mehndi with minimalist geometric style",
+    title: "Backhand Minimal Mehndi",
+    description:
+      "Contemporary backhand mehndi featuring clean geometric lines and floral touch for a modern minimalist look.",
+  },
+  {
+    src: "/images/henna7.jpeg",
+    alt: "Bridal mehndi featuring mandala and lotus motifs",
+    title: "Mandala Lotus Mehndi",
+    description:
+      "Centered mandala mehndi design with lotus motifs representing purity and prosperity for special events.",
+  },
+  {
+    src: "/images/henna8.jpeg",
+    alt: "Elegant mehndi with peacock design",
+    title: "Peacock Elegance Mehndi",
+    description:
+      "Exquisite peacock mehndi combining tradition with artistry, symbolizing love, beauty, and celebration.",
+  },
+  {
+    src: "/images/henna9.jpeg",
+    alt: "Detailed mehndi covering both palms",
+    title: "Double Palm Mehndi",
+    description:
+      "Symmetrical double-palm mehndi design representing harmony and grace, ideal for engagement functions.",
+  },
+  {
+    src: "/images/henna10.jpeg",
+    alt: "Contemporary henna with wrist and finger highlights",
+    title: "Modern Wrist Mehndi",
+    description:
+      "Stylish wrist and finger mehndi with minimal detailing for casual parties and modern festive occasions.",
+  },
+  {
+    src: "/images/henna11.jpeg",
+    alt: "Full bridal mehndi with traditional Rajasthani style",
+    title: "Rajasthani Bridal Mehndi",
+    description:
+      "Traditional Rajasthani-style mehndi filled with bride and groom figures, elephants, and fine line detailing.",
+  },
+  {
+    src: "/images/henna12.jpeg",
+    alt: "Henna featuring Arabic fusion motifs",
+    title: "Fusion Arabic Mehndi",
+    description:
+      "A creative fusion of Arabic and Indian mehndi featuring flowing floral vines and intricate lace-inspired details.",
+  },
+  {
+    src: "/images/henna13.jpeg",
+    alt: "Mehndi with heart pattern and initials for bride & groom",
+    title: "Couple Initials Mehndi",
+    description:
+      "Romantic mehndi design incorporating couple initials and heart patterns, ideal for engagement or pre-wedding shoots.",
+  },
+  {
+    src: "/images/henna14.jpeg",
+    alt: "Full arm mehndi with detailed motifs and shading",
+    title: "Full Arm Detailed Mehndi",
+    description:
+      "Full-arm mehndi filled with artistic motifs, shading, and symmetry — perfect for bridal elegance.",
+  },
+  {
+    src: "/images/henna15.jpeg",
+    alt: "Simple floral mehndi for festive occasions",
+    title: "Festive Floral Mehndi",
+    description:
+      "Light and elegant floral mehndi for Eid, Diwali, or family celebrations — simple yet stunning.",
+  },
+  {
+    src: "/images/henna16.jpeg",
+    alt: "Henna design with circular mandala and dots",
+    title: "Mandala Charm Mehndi",
+    description:
+      "Mesmerizing circular mandala design centered on the palm, surrounded by fine dot detailing for an elegant touch.",
+  },
+  {
+    src: "/images/henna17.jpeg",
+    alt: "Side hand mehndi with Arabic curves and floral art",
+    title: "Side-Hand Arabic Mehndi",
+    description:
+      "Flowy Arabic side-hand mehndi design with curved floral trails — perfect for bridesmaids and festive wear.",
+  },
+  {
+    src: "/images/henna18.jpeg",
+    alt: "Bridal feet mehndi with paisley and floral mix",
+    title: "Bridal Feet Mehndi",
+    description:
+      "Graceful feet mehndi featuring paisley and lotus motifs, adding a royal touch to bridal elegance.",
+  },
 ];
 
 const images = [
@@ -331,9 +439,9 @@ export default function MehndiArtistWebsite() {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4 bg-white">
-                  <div className="font-semibold">Intricate Henna</div>
+                  <div className="font-semibold">{v.title}</div>
                   <div className="text-sm text-slate-600 mt-2">
-                    Bridal handpiece with floral motifs.
+                    {v.description}
                   </div>
                 </div>
               </motion.div>

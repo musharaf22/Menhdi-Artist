@@ -121,7 +121,7 @@ export default function TestimonialsMarquee({
 
         {/* marquee card (big product-like card) */}
         <div
-          className="group relative overflow-hidden rounded-2xl rotate-1 bg-none "
+          className="group relative overflow-hidden rounded-2xl rotate-2 bg-none "
           role="region"
           aria-label="Client testimonials marquee"
         >

@@ -31,7 +31,7 @@ export default function MarqueeGallery({
   const durationSeconds = Math.max(10, Math.round(totalWidthPx / speed));
 
   return (
-    <div className="w-full">
+    <div className="w-full -rotate-2">
       {/* Big card wrapper */}
       <div
         className={`group relative overflow-hidden rounded-2xl bg-white/80 shadow-2xl border border-white/40 ${height}`}
