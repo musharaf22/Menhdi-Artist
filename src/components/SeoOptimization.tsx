@@ -15,7 +15,6 @@ Dependencies:
 - For production analytics use: npm install @vercel/analytics (optional) OR add GA4 script manually
 */
 
-import React from "react";
 import Head from "next/head"; // Only for special tags (App Router supports metadata but we still use Head for LD+custom tags)
 
 // ------------------------
@@ -33,10 +32,10 @@ export function Seo({
   canonical,
   jsonLd = null, // additional structured data object
 }: any) {
-  const siteName = "Mehndi Artistry";
+  const siteName = "Shiva Mehandi Art";
   const finalTitle = title ? `${title} | ${siteName}` : siteName;
-  const finalUrl = canonical || url || "https://your-domain.com";
-  const image = images.length ? images[0] : `${finalUrl}/images/og-image.jpg`;
+  const finalUrl = canonical || url || "shivamehandiart.com";
+  const image = images.length ? images[0] : `${finalUrl}/images/henna2.jpeg`;
 
   // Basic LocalBusiness structured data (customize fields)
   const localBusiness = {
@@ -44,18 +43,20 @@ export function Seo({
     "@type": "LocalBusiness",
     name: siteName,
     image: images,
-    telephone: "+91 98765 43210",
-    priceRange: "$$",
+    telephone: "+916287054190",
+    priceRange: "",
     address: {
       "@type": "PostalAddress",
       streetAddress: "",
-      addressLocality: "Your City",
-      addressRegion: "",
-      postalCode: "",
+      addressLocality: "Gaya, bihar India",
+      addressRegion: "bihar",
+      postalCode: "823001",
       addressCountry: "IN",
     },
     url: finalUrl,
-    sameAs: ["https://instagram.com/yourprofile"],
+    sameAs: [
+      "https://www.instagram.com/reel/DQaot3KkpSo/?igsh=MWkyN2w1b2ZiazZvaA==",
+    ],
   };
 
   // Merge provided jsonLd
