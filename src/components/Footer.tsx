@@ -82,21 +82,21 @@ export default function Footer() {
                   <FiPhone className="w-5 h-5" />
                 </span>
                 <div>
-                  <div className="font-medium">+91 98765 43210</div>
+                  <div className="font-medium">+916287054190</div>
                   <div className="text-xs">Call or WhatsApp</div>
                 </div>
               </a>
 
               <a
                 className="flex items-center gap-3 hover:text-rose-500"
-                href="mailto:mehndi@example.com"
+                href="snayak5034@gmail.com"
                 aria-label="Send email"
               >
                 <span className="p-2 rounded-lg bg-white/80 shadow">
                   <FiMail className="w-5 h-5" />
                 </span>
                 <div>
-                  <div className="font-medium">mehndi@example.com</div>
+                  <div className="font-medium">snayak5034@gmail.com</div>
                   <div className="text-xs">Response within 24 hours</div>
                 </div>
               </a>
