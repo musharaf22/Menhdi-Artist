@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <MehndiArtistWebsite />
       <WhatsAppFloating
-        phone="919876543210"
+        phone="916287054190"
         message="Hi, I'm interested in your mehndi services. Please share availability."
       />
     </>
