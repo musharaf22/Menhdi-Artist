@@ -4,6 +4,7 @@ import GallerySection from "./GallerySection";
 import { useEffect, useRef, useState } from "react";
 import MarqueeGallery from "./GalleryCourousel";
 import Footer from "./Footer";
+import TestimonialsMarquee from "./Testimonials";
 
 // Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
 // Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
@@ -428,38 +429,7 @@ export default function MehndiArtistWebsite() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="testimonials" className="py-16">
-        <div className="w-[90%] mx-auto px-6">
-          <h3 className="text-xl font-semibold">What clients say</h3>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Aisha",
-                note: "Absolutely loved my bridal mehndi — artist was patient and creative.",
-              },
-              {
-                name: "Sana",
-                note: "Guests kept asking who the artist was. Highly recommend.",
-              },
-              {
-                name: "Riya",
-                note: "Professional and timely. Designs were flawless.",
-              },
-            ].map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="p-6 bg-white/70 rounded-2xl shadow"
-              >
-                <div className="font-semibold">{t.name}</div>
-                <div className="mt-2 text-slate-700">"{t.note}"</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsMarquee />
 
       {/* GALLERY */}
       <GallerySection images={galleryImages} />
