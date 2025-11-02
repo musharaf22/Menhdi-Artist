@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import GallerySection from "./GallerySection";
 import { useEffect, useRef, useState } from "react";
+import MarqueeGallery from "./GalleryCourousel";
 
 // Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
 // Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
@@ -24,25 +25,26 @@ const fadeUp = {
   visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.12 } }),
 };
 export const galleryImages = [
-  "/images/henna1,jpeg",
-  "/images/henna2,jpeg",
-  "/images/henna3,jpeg",
-  "/images/henna4,jpeg",
-  "/images/henna5,jpeg",
-  "/images/henna6,jpeg",
-  "/images/henna7,jpeg",
-  "/images/henna8,jpeg",
-  "/images/henna9,jpeg",
-  "/images/henna10,jpeg",
-  "/images/henna11,jpeg",
-  "/images/henna12,jpeg",
-  "/images/henna13,jpeg",
-  "/images/henna14,jpeg",
-  "/images/henna15,jpeg",
-  "/images/henna16,jpeg",
-  "/images/henna17,jpeg",
-  "/images/henna18,jpeg",
+  //   { src: "/images/henna1.jpeg", alt: "" },
+  { src: "/images/henna2.jpeg", alt: "" },
+  { src: "/images/henna3.jpeg", alt: "" },
+  { src: "/images/henna4.jpeg", alt: "" },
+  { src: "/images/henna5.jpeg", alt: "" },
+  { src: "/images/henna6.jpeg", alt: "" },
+  { src: "/images/henna7.jpeg", alt: "" },
+  { src: "/images/henna8.jpeg", alt: "" },
+  { src: "/images/henna9.jpeg", alt: "" },
+  { src: "/images/henna10.jpeg", alt: "" },
+  { src: "/images/henna11.jpeg", alt: "" },
+  { src: "/images/henna12.jpeg", alt: "" },
+  { src: "/images/henna13.jpeg", alt: "" },
+  { src: "/images/henna14.jpeg", alt: "" },
+  { src: "/images/henna15.jpeg", alt: "" },
+  { src: "/images/henna16.jpeg", alt: "" },
+  { src: "/images/henna17.jpeg", alt: "" },
+  { src: "/images/henna18.jpeg", alt: "" },
 ];
+
 const images = [
   "https://plus.unsplash.com/premium_photo-1661896237419-6e232b54eefc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
   "https://plus.unsplash.com/premium_photo-1682092018999-2c8fcfe944f3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670",
@@ -372,6 +374,7 @@ export default function MehndiArtistWebsite() {
         </div>
       </section>
 
+      <MarqueeGallery images={galleryImages as any} height={"h-68"} />
       {/* BOOKING */}
       <section id="booking" className="py-16 border-t border-white/60">
         <div className="max-w-4xl mx-auto px-6">
@@ -458,7 +461,7 @@ export default function MehndiArtistWebsite() {
       </section>
 
       {/* GALLERY */}
-      <GallerySection />
+      <GallerySection images={galleryImages} />
 
       {/* FAQ */}
       <section id="faq" className="py-16">

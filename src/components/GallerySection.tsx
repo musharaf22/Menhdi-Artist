@@ -15,7 +15,11 @@ import { motion, AnimatePresence } from "framer-motion";
  * animated transitions and thumbnails. Built with Tailwind CSS + Framer Motion.
  */
 
-export default function GallerySection({ images = [] }) {
+interface IProps {
+  images: { src: string; alt: string }[];
+}
+
+export default function GallerySection({ images = [] }: IProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
