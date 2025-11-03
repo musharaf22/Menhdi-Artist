@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 // @ts-ignore
 import "./globals.css";
+import { Seo } from "@/components/SeoOptimization";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Menhdi Artist",
-  description: "Menhdiiii",
+  title: "Shiva Mehandi Art — Bridal & Party Mehndi Designs",
+  description:
+    "Professional mehndi artist specializing in bridal, party and custom mehndi designs. Serving local and destination events.",
 };
 
 export default function RootLayout({
@@ -23,8 +25,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const blogPostJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "How to make your mehndi last longer",
+    image: [
+      [
+        "https://www.shivamehandiart.com/images/henna2.jpeg",
+        "https://www.shivamehandiart.com/images/henna3.jpeg",
+      ],
+    ],
+    author: { "@type": "Person", name: "Mehndi Artist" },
+    publisher: { "@type": "Organization", name: "Mehndi Artistry" },
+    datePublished: "2025-01-01",
+  };
   return (
     <html lang="en">
+      <Seo
+        title={metadata.title}
+        description={metadata.description}
+        url={"https://www.shivamehandiart.com/"}
+        images={[
+          "https://www.shivamehandiart.com/images/henna2.jpeg",
+          "https://www.shivamehandiart.com/images/henna3.jpeg",
+        ]}
+        jsonLd={blogPostJsonLd}
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

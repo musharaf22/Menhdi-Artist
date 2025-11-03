@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import MarqueeGallery from "./GalleryCourousel";
 import Footer from "./Footer";
 import TestimonialsMarquee from "./Testimonials";
+import { Seo } from "./SeoOptimization";
 
 // Single-file Next.js page (App Router) using Tailwind CSS + Framer Motion
 // Place this file at app/page.jsx (or pages/index.jsx for Pages Router)
@@ -185,6 +186,16 @@ export default function MehndiArtistWebsite() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-rose-50 via-amber-50 to-white text-slate-900">
+      <Seo
+        title={"best mehandi and tattoo shop in gaya bihar india"}
+        description={"Beautiful, handcrafted henna for every celebration."}
+        url={"https://www.shivamehandiart.com/"}
+        images={[
+          "https://www.shivamehandiart.com/images/henna2.jpeg",
+          "https://www.shivamehandiart.com/images/henna3.jpeg",
+        ]}
+        jsonLd={null}
+      />
       {/* NAV */}
       <nav className="fixed w-full z-40 backdrop-blur-sm bg-white/30 border-b border-white/50">
         <div className="w-[90%] mx-auto px-6 py-3 flex items-center justify-between">
