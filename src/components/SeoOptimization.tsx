@@ -44,7 +44,7 @@ export function Seo({
     name: siteName,
     image: images,
     telephone: "+916287054190",
-    priceRange: "",
+    priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
       streetAddress: "",
@@ -56,6 +56,8 @@ export function Seo({
     url: finalUrl,
     sameAs: [
       "https://www.instagram.com/reel/DQaot3KkpSo/?igsh=MWkyN2w1b2ZiazZvaA==",
+      "https://youtube.com/shorts/jprnjPQKxJw?si=04bBFgfs8nsh_llA",
+      "https://youtube.com/@shivamehandiart-rj6yc?si=JLlyK177Nb0MP0ps",
     ],
   };
 
