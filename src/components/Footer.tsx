@@ -47,7 +47,7 @@ export default function Footer() {
               <motion.a
                 whileHover={{ scale: 1.06 }}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/90 shadow text-slate-800 text-sm"
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/reel/DQVkVadEfel/?igsh=MWNwZjdvenlnOXBpMQ=="
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
