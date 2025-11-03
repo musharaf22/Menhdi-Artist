@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shivamehandiart.com/
+
+# Sitemaps
+Sitemap: https://shivamehandiart.com/sitemap.xml
