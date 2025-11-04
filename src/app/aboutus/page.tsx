@@ -9,8 +9,8 @@ export const metadata = {
     title: "About — Shiva Mehandi Art",
     description:
       "Shiva Mehandi Art in Gaya offers handcrafted bridal mehndi, workshops, and event mehndi. Natural henna and personalized designs.",
-    images: ["/images/henna2.jpeg"],
-    url: "https://www.shivamehandiart.com/about",
+    images: ["/images/henna2.jpeg", "/images/henna3.jpeg"],
+    url: "https://www.shivamehandiart.com/aboutus",
   },
   robots: "index,follow",
 };

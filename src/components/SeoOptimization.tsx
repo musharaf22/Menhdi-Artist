@@ -48,7 +48,7 @@ export function Seo({
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "",
+      streetAddress: "Gaya Bihar Shiva mehndi art swarajpuri Road",
       addressLocality: "Gaya, bihar India",
       addressRegion: "bihar",
       postalCode: "823001",

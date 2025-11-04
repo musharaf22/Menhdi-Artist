@@ -5,20 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
-export const metadata = {
-  title: "About — Shiva Mehandi Art | Best Bridal Mehndi in Gaya, Bihar",
-  description:
-    "Shiva Mehandi Art (Gaya, Bihar) — expert bridal & event mehndi with 10+ years of experience. Natural henna, custom designs, trials & on-time service.",
-  openGraph: {
-    title: "About — Shiva Mehandi Art",
-    description:
-      "Shiva Mehandi Art in Gaya offers handcrafted bridal mehndi, workshops, and event mehndi. Natural henna and personalized designs.",
-    images: ["/images/henna2.jpeg"],
-    url: "https://www.shivamehandiart.com/about",
-  },
-  robots: "index,follow",
-};
-
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
   visible: (i = 1) => ({
@@ -48,7 +34,7 @@ export default function AboutPage() {
     telephone: "+916287054190",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "",
+      streetAddress: "Gaya Bihar Shiva mehndi art swarajpuri Road",
       addressLocality: "Gaya",
       addressRegion: "Bihar",
       postalCode: "823001",
@@ -69,9 +55,9 @@ export default function AboutPage() {
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday", "Sunday"],
+        dayOfWeek: ["Sunday"],
         opens: "10:00",
-        closes: "17:00",
+        closes: "22:00",
       },
     ],
     areaServed: { "@type": "City", name: "Gaya" },
@@ -85,7 +71,7 @@ export default function AboutPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://www.shivamehandiart.com/about" />
+        <link rel="canonical" href="https://www.shivamehandiart.com/aboutus" />
       </Head>
 
       <main className="min-h-screen bg-white text-slate-900">
