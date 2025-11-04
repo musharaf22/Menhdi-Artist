@@ -31,6 +31,7 @@ export function Seo({
   author,
   canonical,
   jsonLd = null, // additional structured data object
+  keywordsContent = [],
 }: any) {
   const siteName = "Shiva Mehandi Art";
   const finalTitle = title ? `${title} | ${siteName}` : siteName;
@@ -69,6 +70,9 @@ export function Seo({
       <Head>
         <title>{finalTitle}</title>
         <meta name="description" content={description} />
+        {keywordsContent?.length > 0 && (
+          <meta name="keywords" content={keywordsContent} />
+        )}
 
         {/* Canonical */}
         <link rel="canonical" href={finalUrl} />

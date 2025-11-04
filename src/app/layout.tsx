@@ -52,6 +52,7 @@ export default function RootLayout({
           "https://www.shivamehandiart.com/images/henna3.jpeg",
         ]}
         jsonLd={blogPostJsonLd}
+        keywordsContent={metadata.keywords}
       />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
