@@ -16,7 +16,7 @@ const fadeUp = {
   }),
 };
 
-export default function AboutPage() {
+export default function AboutPage({ description, title }: any) {
   const keywords = [
     "mehndi artist Gaya",
     "bridal mehndi Gaya",
@@ -75,8 +75,8 @@ export default function AboutPage() {
   return (
     <>
       <Seo
-        title={"Shiva Mehandi Art — Bridal & Party Mehndi Designs"}
-        description={metadata.description}
+        title={title}
+        description={description}
         url={"https://www.shivamehandiart.com/aboutus"}
         images={[
           "https://www.shivamehandiart.com/images/henna2.jpeg",
