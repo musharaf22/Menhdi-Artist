@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { Seo } from "@/components/SeoOptimization";
+import { metadata } from "../layout";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -49,9 +51,16 @@ export default function AboutPage() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
         opens: "10:00",
-        closes: "19:00",
+        closes: "22:00",
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -65,14 +74,25 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head>
+      <Seo
+        title={"Shiva Mehandi Art — Bridal & Party Mehndi Designs"}
+        description={metadata.description}
+        url={"https://www.shivamehandiart.com/aboutus"}
+        images={[
+          "https://www.shivamehandiart.com/images/henna2.jpeg",
+          "https://www.shivamehandiart.com/images/henna3.jpeg",
+        ]}
+        jsonLd={jsonLd}
+        keywordsContent={keywords}
+      />
+      {/* <Head>
         <meta name="keywords" content={keywords} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <link rel="canonical" href="https://www.shivamehandiart.com/aboutus" />
-      </Head>
+      </Head> */}
 
       <main className="min-h-screen bg-white text-slate-900">
         <section className="pt-24 pb-8">

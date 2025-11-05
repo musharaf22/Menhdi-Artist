@@ -48,9 +48,11 @@ export function Seo({
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Gaya Bihar Shiva mehndi art swarajpuri Road",
-      addressLocality: "Gaya, bihar India",
-      addressRegion: "bihar",
+      streetAddress:
+        "Dalmia Bazaar Mall, Swarajpuri Rd, Dalmia Bazaar, Maroof Ganj, Gaya, Bihar 823001",
+      addressLocality:
+        "Swarajpuri Rd, Dalmia Bazaar, Maroof Ganj, Gaya, Bihar India",
+      addressRegion: "Bihar",
       postalCode: "823001",
       addressCountry: "IN",
     },
