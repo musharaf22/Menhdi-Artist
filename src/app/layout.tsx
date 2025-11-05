@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Professional mehndi artist specializing in bridal, party and custom mehndi designs. Serving local and destination events.",
   keywords:
-    "best henna work in gaya bihar , henna works in gaya , mehandi in gaya bihar , mehandi in gaya , best mehandi work in gaya , best bridal mehandi in gaya bihar , best bride mehandi in gaya , best bride mehandi in gaya bihar , bridal mehandi in bihar gaya , bridal mehandi in gaya , mehandi work in gaya bihar , best mehandi work in bihar gaya , best henna work in gaya bihar",
+    "shiva mehandi arts , shiva mehandi art , best mehandi in gaya , best mehandi in gaya bihar india , best henna work in gaya bihar , henna works in gaya , mehandi in gaya bihar , mehandi in gaya , best mehandi work in gaya , best bridal mehandi in gaya bihar , best bride mehandi in gaya , best bride mehandi in gaya bihar , bridal mehandi in bihar gaya , bridal mehandi in gaya , mehandi work in gaya bihar , best mehandi work in bihar gaya , best henna work in gaya bihar",
 };
 
 export default function RootLayout({
@@ -39,8 +39,8 @@ export default function RootLayout({
         "https://www.shivamehandiart.com/images/henna3.jpeg",
       ],
     ],
-    author: { "@type": "Person", name: "Mehndi Artist" },
-    publisher: { "@type": "Organization", name: "Mehndi Artistry" },
+    author: { "@type": "Person", name: "Shiva Mehandi" },
+    publisher: { "@type": "Organization", name: "Shiva Mehandi Art" },
     datePublished: "2025-01-01",
   };
   return (

@@ -7,6 +7,7 @@ import {
   FiMail,
   FiMapPin,
   FiPhone,
+  FiYoutube,
 } from "react-icons/fi";
 
 export default function Footer() {
@@ -44,6 +45,17 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3">
+              <motion.a
+                whileHover={{ scale: 1.06 }}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/90 shadow text-slate-800 text-sm"
+                href="https://youtube.com/shorts/jprnjPQKxJw?si=04bBFgfs8nsh_llA"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Youtube"
+              >
+                <FiYoutube className="w-5 h-5" /> Youtube
+              </motion.a>
+
               <motion.a
                 whileHover={{ scale: 1.06 }}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/90 shadow text-slate-800 text-sm"
@@ -106,7 +118,7 @@ export default function Footer() {
                   <FiMapPin className="w-5 h-5" />
                 </span>
                 <div>
-                  <div className="font-medium">City — Country</div>
+                  <div className="font-medium">Gaya Bihar — India</div>
                   <div className="text-xs">
                     Available for local & destination events
                   </div>
