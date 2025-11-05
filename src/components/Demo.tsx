@@ -186,6 +186,7 @@ export default function MehndiArtistWebsite() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-rose-50 via-amber-50 to-white text-slate-900">
+      <h1 className="hidden">Best mehandi works in gaya bihar</h1>
       <Seo
         title={"best mehandi and tattoo shop in gaya bihar india"}
         description={"Beautiful, handcrafted henna for every celebration."}
@@ -300,9 +301,10 @@ export default function MehndiArtistWebsite() {
           >
             <h2 className="text-2xl font-bold">About the Artist</h2>
             <p className="mt-4 text-slate-700">
-              With a decade of experience, the artist blends traditional henna
-              art with modern aesthetics to craft unique stories on skin.
-              Trained under master artists and available for destination events.
+              Best mehandi works in gaya bihar india, With a decade of
+              experience, the artist blends traditional henna art with modern
+              aesthetics to craft unique stories on skin. Trained under master
+              artists and available for destination events.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-slate-600">
               <li>• 10+ years experience</li>
@@ -401,7 +403,8 @@ export default function MehndiArtistWebsite() {
         <div className="w-[90%] mx-auto px-6">
           <h3 className="text-xl font-semibold">Portfolio</h3>
           <p className="text-slate-600 mt-2">
-            A curated selection of recent works.
+            A curated selection of recent works. Best mehandi works in gaya
+            bihar india
           </p>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

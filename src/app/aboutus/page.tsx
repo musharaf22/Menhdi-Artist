@@ -83,6 +83,7 @@ const AboutPageMain = () => {
         jsonLd={jsonLd}
         keywordsContent={keywords}
       />
+      <h1 className="hidden">Best mehandi works in gaya bihar</h1>
       <AboutPage description={metadata.description} title={metadata.title} />
     </>
   );

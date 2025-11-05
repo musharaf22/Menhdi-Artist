@@ -9,7 +9,7 @@ const Navbar = () => {
           <div>
             <div className="text-sm font-semibold">Shiva Mehndi Arts</div>
             <div className="text-xs text-slate-700">
-              Bridal | Events | Custom
+              Bridal | Events | Custom | Best mehandi works in gaya bihar.
             </div>
           </div>
         </div>

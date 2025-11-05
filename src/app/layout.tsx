@@ -17,9 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shiva Mehandi Art — Bridal & Party Mehndi Designs",
+  title:
+    "Shiva Mehandi Art — Bridal & Party Mehndi Designs Best mehandi works in gaya bihar",
   description:
-    "Professional & Best mehndi artist in gaya bihar specializing in bridal, party and custom mehndi designs. Serving local and destination events.",
+    "Best mehandi works in gaya bihar, Professional & Best mehndi artist in gaya bihar specializing in bridal, party and custom mehndi designs. Serving local and destination events.",
   keywords:
     "shiva mehandi art gaya bihar , shiva mehandi arts , shiva mehandi art , best mehandi in gaya , best mehandi in gaya bihar india , best henna work in gaya bihar , henna works in gaya , mehandi in gaya bihar , mehandi in gaya , best mehandi work in gaya , best bridal mehandi in gaya bihar , best bride mehandi in gaya , best bride mehandi in gaya bihar , bridal mehandi in bihar gaya , bridal mehandi in gaya , mehandi work in gaya bihar , best mehandi work in bihar gaya , best henna work in gaya bihar",
 };
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <h1 className="hidden">Best mehandi works in gaya bihar</h1>
         <Navbar />
         {children}
         <Footer />

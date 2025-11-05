@@ -20,6 +20,7 @@ export default function Footer() {
 
   return (
     <footer className="mt-12 bg-gradient-to-tr from-rose-50 to-amber-50 border-t border-white/40">
+      <h1 className="hidden">Best mehandi works in gaya bihar</h1>
       <div className="w-[90%] mx-auto py-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Brand */}
@@ -39,9 +40,9 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-slate-700 max-w-sm">
-              Make your moments memorable — handcrafted henna designs, friendly
-              consultations, and on-time service. Serving local & destination
-              events.
+              Best mehandi works in gaya bihar, Make your moments memorable —
+              handcrafted henna designs, friendly consultations, and on-time
+              service. Serving local & destination events.
             </p>
 
             <div className="flex gap-3">
