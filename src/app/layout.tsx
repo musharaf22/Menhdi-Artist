@@ -46,7 +46,7 @@ export default function RootLayout({
   };
   return (
     <html lang="en">
-      <Seo
+      {/* <Seo
         title={metadata.title}
         description={metadata.description}
         url={"https://www.shivamehandiart.com/"}
@@ -56,14 +56,14 @@ export default function RootLayout({
         ]}
         jsonLd={blogPostJsonLd}
         keywordsContent={metadata.keywords}
-      />
+      /> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <h1 className="hidden">Best mehandi works in gaya bihar</h1>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

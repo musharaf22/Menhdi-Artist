@@ -72,7 +72,12 @@ const AboutPageMain = () => {
   };
   return (
     <>
-      <Seo
+      <div className="flex items-center justify-center h-screen w-screen">
+        <h1 className="font-bold text-2xl">
+          Pay Developer Fee to resume website
+        </h1>
+      </div>
+      {/* <Seo
         title={metadata.title}
         description={metadata.description}
         url={"https://www.shivamehandiart.com/aboutus"}
@@ -84,7 +89,7 @@ const AboutPageMain = () => {
         keywordsContent={keywords}
       />
       <h1 className="hidden">Best mehandi works in gaya bihar</h1>
-      <AboutPage description={metadata.description} title={metadata.title} />
+      <AboutPage description={metadata.description} title={metadata.title} /> */}
     </>
   );
 };
